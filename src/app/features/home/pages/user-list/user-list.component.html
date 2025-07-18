@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <input [(ngModel)]="newUser" type="text">
+        <button (click)="addUser()">Add User</button>
+    </div>
+    <h1>{{newUser}}</h1>
+    <div *ngFor="let user of users">
+        {{user}}
+    </div>
+</div>
