@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  title:string = "AnimeManiac Thrift Store"
+  title:string = "AnimeManiac Thrift Store";
+  name = 'The Great Pooja';
 }

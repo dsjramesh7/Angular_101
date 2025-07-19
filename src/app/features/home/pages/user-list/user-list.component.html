@@ -1,10 +1,39 @@
-<div>
-    <div>
-        <input [(ngModel)]="newUser" type="text">
-        <button (click)="addUser()">Add User</button>
+
+
+<div class="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-xl space-y-6">
+    <div class="flex gap-4">
+        <input
+            [(ngModel)]="newUser"
+            type="text"
+            placeholder="Enter user name"
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+            (click)="addUser()"
+            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+        >
+            Add User
+        </button>
     </div>
-    <h1>{{newUser}}</h1>
-    <div *ngFor="let user of users">
-        {{user}}
+
+    <h1 class="text-xl font-semibold text-gray-800">Preview: {{ newUser }}</h1>
+
+    <div *ngFor="let user of users; let i=index" class="flex justify-between items-center bg-gray-100 px-4 py-2 rounded-md">
+        <span class="text-gray-700">{{ user }}</span>
+        <div class="flex gap-2">
+            <!-- <button
+            (click)="editUser()"
+                class="px-3 py-1 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition"
+            >
+                Edit
+            </button> -->
+            <button
+            (click)="deleteUser(i)"
+
+                class="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+            >
+                Delete
+            </button>
+        </div>
     </div>
 </div>

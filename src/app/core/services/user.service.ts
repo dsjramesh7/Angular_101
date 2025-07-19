@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   constructor() { }
-  private userList:string[]=['Midoriya','Bakuga']
+  private userList:string[]=[]
 
   getUserList():string[]{
     return [...this.userList]
@@ -14,5 +14,10 @@ export class UserService {
 
   addUserInUserList(user:string):void{
     this.userList.push(user)
+  }
+
+  deleteUserFromUserList(id:number):void{
+    this.userList.splice(id,1)
+    console.log("cha");
   }
 }
