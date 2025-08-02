@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <input [(ngModel)]="taskTitle" type="text" />
+    <button (click)="handleAddTask()">Add</button>
+  </div>
+
+  <div>
+    Preview:<span>{{taskTitle}}</span>
+  </div>
+
+  <div *ngFor="let task of todoList; let i= index">
+    <div>
+        <h3>{{task}}</h3>
+        <div>
+            <button>Edit</button>
+            <button (click)="handleDeleteTask(i)">❌</button>
+        </div>
+    </div>
+  </div>
+</div>
