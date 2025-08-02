@@ -9,10 +9,11 @@
   </div>
 
   <div *ngFor="let task of todoList; let i= index">
-    <div>
+    <div class="align">
+        <input type="checkbox">
         <h3>{{task}}</h3>
-        <div>
-            <button (click)="handleEditTask(i)">Edit</button>
+        <div class="button-align">
+            <button (click)="handleEditTask(i)">✏️</button>
             <button (click)="handleDeleteTask(i)">❌</button>
         </div>
     </div>
